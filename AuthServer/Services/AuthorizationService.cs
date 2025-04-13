@@ -2,6 +2,7 @@ using System.Security.Claims;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.Extensions.Primitives;
 using OpenIddict.Abstractions;
+using static OpenIddict.Abstractions.OpenIddictConstants;
 
 namespace AuthServer.Services;
 
@@ -47,9 +48,12 @@ public static class AuthorizationService
     {
         List<string> destinations = [];
 
-        if (claim.Type is OpenIddictConstants.Claims.Name or OpenIddictConstants.Claims.Email
-            or OpenIddictConstants.Claims.Role)
-            destinations.Add(OpenIddictConstants.Destinations.AccessToken);
+        if (claim.Type is Claims.Name or Claims.Username
+            or Claims.Role)
+            destinations.Add(Destinations.AccessToken);
+
+        if (claim.Type is Claims.Name or Claims.Username or Claims.Email or Claims.Role)
+            destinations.Add(Destinations.IdentityToken);
 
         return destinations;
     }

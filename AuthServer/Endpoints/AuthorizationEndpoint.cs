@@ -120,7 +120,8 @@ public static class AuthorizationEndpoint
 
         identity.SetClaim(Claims.Subject, user.Id.ToString())
             .SetClaim(Claims.Email, user.Email)
-            .SetClaim(Claims.Name, user.UserName)
+            .SetClaim(Claims.Username, user.UserName)
+            .SetClaim(Claims.Name, $"{user.FirstName} {user.LastName}")
             .SetClaims(Claims.Audience, audiences)
             .SetClaims(Claims.Role, [..await userManager.GetRolesAsync(user)]);
 
@@ -219,8 +220,8 @@ public static class AuthorizationEndpoint
         // changed since the authorization code/refresh token was issued.
         identity.SetClaim(Claims.Subject, userId)
             .SetClaim(Claims.Email, user.Email)
-            .SetClaim(Claims.Name, user.UserName)
-            .SetClaim(Claims.Name, user.UserName)
+            .SetClaim(Claims.Username, user.UserName)
+            .SetClaim(Claims.Name, $"{user.FirstName} {user.LastName}")
             .SetClaims(Claims.Role, [..await userManager.GetRolesAsync(user)]);
 
         identity.SetDestinations(c => GetDestinations(identity, c));
