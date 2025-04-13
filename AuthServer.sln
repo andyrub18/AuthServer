@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthServer", "AuthServer\AuthServer.csproj", "{D6192423-289A-4CDC-BF7D-3CB7628B8930}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Resource", "Resource\Resource.csproj", "{64A5DB2B-5E4A-499A-B615-08AC8B5B93CA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D6192423-289A-4CDC-BF7D-3CB7628B8930}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6192423-289A-4CDC-BF7D-3CB7628B8930}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6192423-289A-4CDC-BF7D-3CB7628B8930}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6192423-289A-4CDC-BF7D-3CB7628B8930}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64A5DB2B-5E4A-499A-B615-08AC8B5B93CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64A5DB2B-5E4A-499A-B615-08AC8B5B93CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64A5DB2B-5E4A-499A-B615-08AC8B5B93CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64A5DB2B-5E4A-499A-B615-08AC8B5B93CA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
